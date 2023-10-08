@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SpeechRecognizer</string>
+    <string name="record_audio_permission">Record audio permission</string>
+    <string name="record_audio_explanation">The app needs the record audio permission in order to listen to your speech and write the output. Without this permission the app will not work!</string>
+    <string name="permission_denied">Record Audio permission denied</string>
+    <string name="record_audio_explanation_denied">You denied the record audio permission, the will not work!</string>
 </resources>

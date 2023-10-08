@@ -7,6 +7,10 @@ android {
     namespace 'com.edoardo.speechrecognizer'
     compileSdk 33
 
+    buildFeatures {
+        viewBinding true
+    }
+
     defaultConfig {
         applicationId "com.edoardo.speechrecognizer"
         minSdk 24
