@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/ll_bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constrainedHeight="true"
+        android:layout_marginBottom="10dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ll_bottom"
         android:orientation="vertical">
 
 <!--        Current State-->
@@ -22,7 +28,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Current state"/>
+                android:text="Current state:"/>
             <TextView
                 android:id="@+id/text_current_state"
                 android:layout_marginStart="20dp"
@@ -39,7 +45,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Current command"/>
+                android:text="Current command:"/>
             <TextView
                 android:id="@+id/text_current_command"
                 android:layout_marginStart="20dp"
@@ -56,7 +62,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Current parameters"/>
+                android:text="Current parameters:"/>
             <TextView
                 android:id="@+id/text_current_parameters"
                 android:layout_marginStart="20dp"
@@ -73,7 +79,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Speech detected last few seconds"/>
+                android:text="Speech detected:"/>
             <TextView
                 android:id="@+id/text_speech_detected"
                 android:layout_marginStart="20dp"
@@ -98,6 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                tools:listitem="@layout/output_card"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 />
         </LinearLayout>
@@ -105,10 +112,12 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/ll_bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
@@ -129,4 +138,4 @@
     </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

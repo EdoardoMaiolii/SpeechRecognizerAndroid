@@ -1,12 +1,11 @@
-package com.edoardo.speechrecognizer
+package com.edoardo.speechrecognizer.ui
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.edoardo.speechrecognizer.R
 import com.edoardo.speechrecognizer.model.Output
 
 class OutputAdapter  :
@@ -42,6 +41,15 @@ class OutputAdapter  :
         val prevOutputsCount = this.outputs.size
         this.outputs.addAll(outputs)
         notifyItemRangeInserted(prevOutputsCount + 1, outputs.size)
+    }
+
+    fun removeLastOutput() {
+        val prevOutputsCount = this.outputs.size
+        if (prevOutputsCount != 0) {
+            this.outputs.removeLast()
+            notifyItemRemoved(this.outputs.size)
+            notifyItemRangeRemoved(prevOutputsCount - 1, this.outputs.size)
+        }
     }
 
 }
