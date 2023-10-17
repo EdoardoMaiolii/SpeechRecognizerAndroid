@@ -52,7 +52,7 @@ class MainActivity: AppCompatActivity() {
         Word(arrayListOf("reset", "present"),"reset"),
         Word(arrayListOf("back", "bak", "bac", "bec", "beck"),"back"),
         )
-//    private val parametersWords = arrayListOf<String>("one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
+
     private val parametersWords = arrayListOf<Word>(
     Word(arrayListOf("zero","0", "ziro"), "0"),
         Word(arrayListOf("one","1", "uan"), "1"),
