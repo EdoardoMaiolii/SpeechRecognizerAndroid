@@ -7,4 +7,5 @@ Reset and back are exception:
 - Back -> delete the last printed output.
 
 ## Run the application
--Hit play on Android Studio on emulator or phisycal device
+- Hit play on Android Studio on emulator or physical device
+- Install the apk SpeechRecognizer.apk (located in the project root directory) on physical device.
